@@ -23,4 +23,5 @@ echo "    project = \"${PROJECT}\"" >> ~/.config/nobl9/config.toml
 
 pwd
 ls -alh
+echo "/github/workspace/$SLOCTL_YML"
 ./sloctl apply -f /github/workspace/"$SLOCTL_YML"
