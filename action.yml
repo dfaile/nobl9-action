@@ -23,11 +23,10 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  env:
-    SLOCTL_VERSION: ${{ inputs.sloctl_version }}
-    CLIENT_ID: ${{ inputs.client_id }}
-    CLIENT_SECRET: ${{ inputs.client_secret }}
-    ACCESS_TOKEN: ${{ inputs.access_token }}
-    PROJECT: ${{ inputs.project }}
-    SLOCTL_YML: ${{ inputs.sloctl_yml }}
-    
+  args:
+    - ${{ inputs.sloctl_version }}
+    - ${{ inputs.client_id }}
+    - ${{ inputs.client_secret }}
+    - ${{ inputs.access_token }}
+    - ${{ inputs.project }}
+    - ${{ inputs.sloctl_yml }}
