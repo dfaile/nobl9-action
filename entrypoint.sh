@@ -9,6 +9,7 @@ SLOCTL_YML=$6
 
 wget https://github.com/nobl9/sloctl/releases/download/"${SLOCTL_VERSION}"/sloctl-linux-"${SLOCTL_VERSION}".zip
 unzip sloctl-linux-"${SLOCTL_VERSION}".zip
+chmod +x ./sloctl
 mkdir -p ~/.config/nobl9
 touch ~/.config/nobl9/config.toml
 
