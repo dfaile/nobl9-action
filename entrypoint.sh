@@ -20,4 +20,6 @@ echo "    clientSecret = \"${CLIENT_SECRET}\"" >> ~/.config/nobl9/config.toml
 echo "    accessToken = \"${ACCESS_TOKEN}\"" >> ~/.config/nobl9/config.toml
 echo "    project = \"${PROJECT}\"" >> ~/.config/nobl9/config.toml
 
-./sloctl apply -f "$GITHUB_WORKSPACE"/"$SLOCTL_YML"
+pwd
+ls -alh
+./sloctl apply -f /github/workflow/"$SLOCTL_YML"
