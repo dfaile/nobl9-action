@@ -24,7 +24,6 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.sloctl_version }}
     - ${{ inputs.client_id }}
     - ${{ inputs.client_secret }}
     - ${{ inputs.access_token }}

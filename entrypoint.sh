@@ -1,15 +1,11 @@
 #!/bin/sh
 
-SLOCTL_VERSION=$1
-CLIENT_ID=$2
-CLIENT_SECRET=$3
-ACCESS_TOKEN=$4
-PROJECT=$5
-SLOCTL_YML=$6
+CLIENT_ID=$1
+CLIENT_SECRET=$2
+ACCESS_TOKEN=$3
+PROJECT=$4
+SLOCTL_YML=$5
 
-wget https://github.com/nobl9/sloctl/releases/download/"${SLOCTL_VERSION}"/sloctl-linux-"${SLOCTL_VERSION}".zip
-unzip sloctl-linux-"${SLOCTL_VERSION}".zip
-install -o root -g root -m 0755 ./sloctl /usr/local/bin/sloctl
 mkdir -p ~/.config/nobl9
 touch ~/.config/nobl9/config.toml
 
