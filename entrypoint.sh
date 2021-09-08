@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sloctl apply -f /github/workspace/${INPUT_SLOCTL_YML}
+sloctl apply -f /github/workspace/${SLOCTL_YML}
