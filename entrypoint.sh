@@ -9,7 +9,6 @@ SLOCTL_YML=$6
 
 wget https://github.com/nobl9/sloctl/releases/download/"${SLOCTL_VERSION}"/sloctl-linux-"${SLOCTL_VERSION}".zip
 unzip sloctl-linux-"${SLOCTL_VERSION}".zip
-install -o root -g root -m 0755 ./sloctl /usr/local/bin/sloctl
 mkdir -p ~/.config/nobl9
 touch ~/.config/nobl9/config.toml
 
@@ -21,4 +20,4 @@ echo "    clientSecret = \"${CLIENT_SECRET}\"" >> ~/.config/nobl9/config.toml
 echo "    accessToken = \"${ACCESS_TOKEN}\"" >> ~/.config/nobl9/config.toml
 echo "    project = \"${PROJECT}\"" >> ~/.config/nobl9/config.toml
 
-sloctl apply -f "$GITHUB_WORKSPACE"/"$SLOCTL_YML"
+./sloctl apply -f "$GITHUB_WORKSPACE"/"$SLOCTL_YML"
