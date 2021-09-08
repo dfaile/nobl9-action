@@ -9,7 +9,7 @@ SLOCTL_YML=$6
 
 wget https://github.com/nobl9/sloctl/releases/download/"${SLOCTL_VERSION}"/sloctl-linux-"${SLOCTL_VERSION}".zip
 unzip sloctl-linux-"${SLOCTL_VERSION}".zip
-chmod +x ./sloctl
+install -o root -g root -m 0755 ./sloctl /usr/local/bin/sloctl
 mkdir -p ~/.config/nobl9
 touch ~/.config/nobl9/config.toml
 
@@ -29,4 +29,4 @@ echo "/github/workflow"
 ls -alh "/github/workflow"
 echo "/github/home"
 ls -alh "/github/home"
-./sloctl apply -f /github/workspace/"$SLOCTL_YML"
+sloctl apply -f /github/workspace/"$SLOCTL_YML"
