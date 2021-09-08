@@ -1,8 +1,8 @@
 FROM alpine:3.10
 
-RUN echo $GITHUB_WORKSPACE
-RUN echo $SLOCTL_VERSION
-RUN echo $CLIENT_ID
+COPY debug.sh /debug.sh
+
+RUN ./debug.sh
 
 ADD "https://github.com/nobl9/sloctl/releases/download/${SLOCTL_VERSION}/sloctl-linux-${SLOCTL_VERSION}.zip" /usr/local/bin
 
