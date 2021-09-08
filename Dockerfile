@@ -1,11 +1,18 @@
 FROM alpine:3.10
 
-CMD env
+ARG SLOCTL_YML
+ARG CLIENT_ID
+ARG CLIENT_SECRET
+ARG ACCESS_TOKEN
+ARG PROJECT
+ARG SLOCTL_YML
 
 ADD "https://github.com/nobl9/sloctl/releases/download/$SLOCTL_VERSION/sloctl-linux-$SLOCTL_VERSION.zip" /usr/local/bin
 
 
 COPY entrypoint.sh /entrypoint.sh
+RUN echo 'sloctl apply -f /github/workspace/${SLOCTL_YML}' >> /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
 COPY config.toml ~/.config/nobl9/config.toml
 RUN echo '    clientId = "${CLIENT_ID}"' >> ~/.config/nobl9/config.toml
