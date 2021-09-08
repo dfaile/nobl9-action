@@ -17,5 +17,5 @@ echo "    clientSecret = \"${CLIENT_SECRET}\"" >> ~/.config/nobl9/config.toml
 echo "    accessToken = \"${ACCESS_TOKEN}\"" >> ~/.config/nobl9/config.toml
 echo "    project = \"${PROJECT}\"" >> ~/.config/nobl9/config.toml
 
-ls -alh /
+file /sloctl
 /sloctl apply -f "$SLOCTL_YML"
