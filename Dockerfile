@@ -1,5 +1,7 @@
 FROM alpine:3.10
 
+CMD env
+
 ADD "https://github.com/nobl9/sloctl/releases/download/$SLOCTL_VERSION/sloctl-linux-$SLOCTL_VERSION.zip" /usr/local/bin
 
 
