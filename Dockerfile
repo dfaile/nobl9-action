@@ -8,4 +8,4 @@ RUN unzip /sloctl-linux-0.0.55.zip
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh", "-l", "-c"]
+ENTRYPOINT ["/entrypoint.sh"]
