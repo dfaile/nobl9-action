@@ -18,6 +18,4 @@ echo "    accessToken = \"${ACCESS_TOKEN}\"" >> ~/.config/nobl9/config.toml
 echo "    project = \"${PROJECT}\"" >> ~/.config/nobl9/config.toml
 
 
-wget https://accounts.nobl9.com/oauth2/auseg9kiegWKEtJZC416/v1/token
-
 /sloctl apply -f "$SLOCTL_YML"
